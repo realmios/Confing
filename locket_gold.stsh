@@ -1,14 +1,14 @@
-name: Locket Gold Final
-desc: Kích hoạt huy hiệu Gold dựa trên API J2Team
+name: Locket Gold Real Fix
+desc: Kích hoạt huy hiệu Gold
 author: Aedotris
 
 http:
   mitm:
     - "api.locketcamera.com"
-  
   script:
     - name: Locket_Gold_Logic
       pattern: ^https:\/\/api\.locketcamera\.com\/(getSubscriptionV2|getUserInfo|changeProfileInfo|getUserByUsername)
       type: response
       requires-body: true
       script-path: https://raw.githubusercontent.com/realmios/Confing/refs/heads/main/Locket.js
+      timeout: 10
